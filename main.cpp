@@ -459,7 +459,8 @@ void input(int*** array, int*** array_copy, int K, int N, int M, int P) // вв�
 
 int main()
 {
-    setlocale(LC_ALL, "Rus");
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
     srand(time(0));
 
     int N; // количество строк
