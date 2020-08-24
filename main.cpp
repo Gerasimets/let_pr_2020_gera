@@ -21,22 +21,22 @@ void deliter(int*** array, int K, int N) // удаление массива
 
 void all_elements(int* mass_number, int P, int N, int M)
 {
-    //int quantity_0 = (P * N * M) / 100; // количество 0 в каждой матрице
+    int quantity_0 = (P * N * M) / 100; // количество 0 в каждой матрице
 
-    //for (int i = 0; i < N * M; i++) // заполняем массив элементовк
-    //{
-    //    if (quantity_0 != 0) // сначала используем все нули
-    //    {
-    //        mass_number[i] = 0;
-    //        quantity_0--;
-    //    }
-    //    else
-    //    {
-    //        mass_number[i] = 1; // остальное заполняем единицами
-    //    }
-    //}
+    for (int i = 0; i < N * M; i++) // заполняем массив элементовк
+    {
+        if (quantity_0 != 0) // сначала используем все нули
+        {
+            mass_number[i] = 0;
+            quantity_0--;
+        }
+        else
+        {
+            mass_number[i] = 1; // остальное заполняем единицами
+        }
+    }
 
-    __asm
+    /*__asm
     {
         mov eax, P // вставляем P
         mul N // домножаем P на N
@@ -73,7 +73,7 @@ void all_elements(int* mass_number, int P, int N, int M)
         jmp start // возвращаемся чтобы заполнить следующий элемент
 
         End : // все элементы заполнены
-    }
+    }*/
 
     for (int i = N * M - 1; i >= 1; i--) // перемешиваем все элементы массива
     {
