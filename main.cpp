@@ -242,7 +242,7 @@ int result(int*** array_copy, int i, int K, int N, int M, int*** mas_max_cnt, in
 void filling(int*** array, int* mass_number, int K, int N, int M, int P)
 {
     ofstream fout;
-    fout.open("gera_test.txt", ios_base::app);
+    fout.open("original.txt", ios_base::app);
     if (!fout.is_open())
     {
         cout << "Файл не может быть открыт!" << endl;
@@ -348,14 +348,14 @@ void filling(int*** array, int* mass_number, int K, int N, int M, int P)
 void input(int*** array, int*** array_copy, int K, int N, int M, int P) // ввод в файл с результатом
 {
     ofstream fout2;
-    fout2.open("gera_test1.txt", ios_base::app);
+    fout2.open("resulting.txt", ios_base::app);
     if (!fout2.is_open())
     {
         cout << "Файл не может быть открыт!" << endl;
     }
     else
     {
-        ifstream fin("gera_test.txt"); // открыли файл для чтения
+        ifstream fin("original.txt"); // открыли файл для чтения
         if (!fin.is_open())
         {
             cout << "Файл не может быть открыт!" << endl;
@@ -469,7 +469,7 @@ int main()
     int P; // процент нулей
 
     ofstream fout;
-    fout.open("gera_test.txt", ios_base::trunc); // удаляем старое содержимое файла
+    fout.open("original.txt", ios_base::trunc); // удаляем старое содержимое файла
     if (!fout.is_open())
     {
         cout << "Файл не может быть открыт!" << endl;
@@ -478,7 +478,7 @@ int main()
     {
         fout.close();
         ofstream fout3;
-        fout3.open("gera_test1.txt", ios_base::trunc); // удаляем старое содержимое файла
+        fout3.open("resulting.txt", ios_base::trunc); // удаляем старое содержимое файла
         if (!fout3.is_open())
         {
             cout << "Файл не может быть открыт!" << endl;
@@ -521,7 +521,7 @@ int main()
             K = 0; // количество исходных матриц
             P = 0; // процент нулей
 
-            ifstream fin("gera_test.txt"); // открыли файл для чтения
+            ifstream fin("original.txt"); // открыли файл для чтения
             if (!fin.is_open())
             {
                 cout << "Файл не может быть открыт!" << endl;
