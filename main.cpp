@@ -459,10 +459,10 @@ void input(int*** array, int*** array_copy, int K, int N, int M, int P) // ввод 
 
 int main()
 {
-    //SetConsoleOutputCP(CP_UTF8);
-    //SetConsoleCP(CP_UTF8);
-    SetConsoleOutputCP(1251/*CP_UTF8*/);
-    SetConsoleCP(1251/*CP_UTF8*/);
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+    //SetConsoleOutputCP(1251/*CP_UTF8*/);
+    //SetConsoleCP(1251/*CP_UTF8*/);
     srand(time(0));
 
     int N; // количество строк
