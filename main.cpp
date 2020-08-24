@@ -461,8 +461,8 @@ int main()
 {
     //SetConsoleOutputCP(CP_UTF8);
     //SetConsoleCP(CP_UTF8);
-    //SetConsoleOutputCP(1251/*CP_UTF8*/);
-    //SetConsoleCP(1251/*CP_UTF8*/);
+    SetConsoleOutputCP(1251/*CP_UTF8*/);
+    SetConsoleCP(1251/*CP_UTF8*/);
     srand(time(0));
 
     int N; // количество строк
